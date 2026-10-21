@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Anisha Kumari - Modern Web Developer & Digital Solutions Portfolio. Phone: 9229947683, Email: anisha84121@gmail.com. Crafting fast, responsive web experiences.">
+    <title>Anisha Kumari | Web Developer & Digital Solutions</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Ambient Background Lighting -->
+    <div class="ambient-glow ambient-glow-top"></div>
+    <div class="ambient-glow ambient-glow-right"></div>
+    <div class="ambient-glow ambient-glow-left"></div>
+
+    <!-- Fixed Navigation Bar -->
+    <header class="navbar-wrapper" id="navbar-wrapper">
+        <nav class="navbar" id="navbar">
+            <a href="#home" class="logo" id="logo">
+                <span class="logo-badge">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                        <polyline points="2 17 12 22 22 17"></polyline>
+                        <polyline points="2 12 12 17 22 12"></polyline>
+                    </svg>
+                </span>
+                <span class="logo-text">Anisha Kumari<span class="logo-dot">.</span></span>
+            </a>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home" class="nav-link active"><span class="nav-dot"></span>Home</a></li>
+                <li><a href="#about" class="nav-link"><span class="nav-dot"></span>About</a></li>
+                <li><a href="#services" class="nav-link"><span class="nav-dot"></span>Services</a></li>
+                <li><a href="#portfolio" class="nav-link"><span class="nav-dot"></span>Work</a></li>
+                <li><a href="#testimonials" class="nav-link"><span class="nav-dot"></span>Reviews</a></li>
+                <li><a href="#contact" class="nav-link"><span class="nav-dot"></span>Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <!-- Theme Toggle Button -->
+                <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+
+                <!-- CTA Button -->
+                <a href="#contact" class="btn btn-nav">
+                    <span>Let's Talk</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </nav>
+        <!-- Interactive Scroll Progress Indicator -->
+        <div class="scroll-progress-container">
+            <div class="scroll-progress-bar" id="scroll-progress"></div>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Navigation -->
+    <div class="mobile-menu-overlay" id="mobile-overlay"></div>
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-header">
+            <span class="logo-text">Anisha Kumari<span class="logo-dot">.</span></span>
+            <button class="close-mobile-menu" id="close-mobile-menu" aria-label="Close menu">&times;</button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="#home" class="mobile-link">Home</a></li>
+            <li><a href="#about" class="mobile-link">About</a></li>
+            <li><a href="#services" class="mobile-link">Services</a></li>
+            <li><a href="#portfolio" class="mobile-link">Work</a></li>
+            <li><a href="#testimonials" class="mobile-link">Testimonials</a></li>
+            <li><a href="#contact" class="mobile-link">Contact</a></li>
+        </ul>
+        <div class="mobile-menu-footer">
+            <a href="#contact" class="btn btn-primary btn-block">Get Started</a>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <!-- HERO SECTION -->
+        <section id="home" class="hero">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="badge-pill">
+                        <span class="badge-dot"></span>
+                        <span>Full-Stack Web Developer & Designer</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="gradient-text">Anisha Kumari</span> <br>
+                        Crafting Modern & <br>
+                        High-Impact Web Experiences
+                    </h1>
+
+                    <p class="hero-subtitle">
+                        Building responsive, high-performance websites and intuitive digital applications. Direct contact: <a href="mailto:anisha84121@gmail.com" style="color: var(--accent-primary); font-weight: 600;">anisha84121@gmail.com</a> | <a href="tel:9229947683" style="color: var(--accent-primary); font-weight: 600;">+91 9229947683</a>.
+                    </p>
+
+                    <div class="hero-cta-group">
+                        <a href="#services" class="btn btn-primary">
+                            <span>Explore Services</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                            <span>Book Consultation</span>
+                        </a>
+                    </div>
+
+                    <!-- Trust Stats Bar -->
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">250<span class="stat-plus">+</span></span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number">99.4<span class="stat-plus">%</span></span>
+                            <span class="stat-label">Satisfaction Rate</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number">15<span class="stat-plus">+</span></span>
+                            <span class="stat-label">Design Awards</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Graphic / Interactive Card -->
+                <div class="hero-visual">
+                    <div class="hero-glass-card">
+                        <div class="card-glass-header">
+                            <div class="window-dots">
+                                <span class="dot dot-red"></span>
+                                <span class="dot dot-yellow"></span>
+                                <span class="dot dot-green"></span>
+                            </div>
+                            <span class="card-glass-title">anisha-kumari.dev</span>
+                            <span class="card-status-badge">Available For Hire</span>
+                        </div>
+
+                        <div class="card-metric-grid">
+                            <div class="metric-box">
+                                <span class="metric-caption">Performance</span>
+                                <span class="metric-val">99 / 100</span>
+                                <div class="metric-bar"><div class="metric-progress" style="width: 99%;"></div></div>
+                            </div>
+                            <div class="metric-box">
+                                <span class="metric-caption">Page Speed</span>
+                                <span class="metric-val">0.32s</span>
+                                <div class="metric-bar"><div class="metric-progress metric-progress-alt" style="width: 95%;"></div></div>
+                            </div>
+                        </div>
+
+                        <div class="feature-tag-list">
+                            <span class="tag"><span class="tag-icon">⚡</span> Ultra Responsive</span>
+                            <span class="tag"><span class="tag-icon">🎨</span> Modern UI/UX</span>
+                            <span class="tag"><span class="tag-icon">🛡️</span> Bank-Grade Secure</span>
+                            <span class="tag"><span class="tag-icon">🚀</span> SEO Optimized</span>
+                        </div>
+
+                        <!-- Floating Micro Badge 1 -->
+                        <div class="floating-badge badge-top-right">
+                            <div class="floating-avatar">★</div>
+                            <div>
+                                <div class="floating-title">Top Rated Studio</div>
+                                <div class="floating-sub">5.0 Star Agency</div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Micro Badge 2 -->
+                        <div class="floating-badge badge-bottom-left">
+                            <div class="pulse-indicator"></div>
+                            <div>
+                                <div class="floating-title">System Status</div>
+                                <div class="floating-sub">All Services Online</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="section about-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="badge-pill">
+                        <span>About Our Studio</span>
+                    </div>
+                    <h2 class="section-title">Where Vision Meets <span class="gradient-text">Precision Engineering</span></h2>
+                    <p class="section-subtitle">
+                        We are a team of passionate creators, engineers, and digital architects dedicated to transforming bold ideas into high-impact digital reality.
+                    </p>
+                </div>
+
+                <div class="about-grid">
+                    <!-- Profile Spotlight Card -->
+                    <div class="about-card profile-spotlight-card">
+                        <div class="profile-header">
+                            <div class="profile-avatar-circle">AK</div>
+                            <div>
+                                <h3 class="profile-name">Anisha Kumari</h3>
+                                <p class="profile-role">Web Developer & UI/UX Specialist</p>
+                            </div>
+                        </div>
+                        <p class="profile-bio">
+                            Dedicated to engineering modern, visually stunning, and responsive digital solutions. With expertise across front-end design, modular architecture, and user experience, I build products that make a lasting impression.
+                        </p>
+                        <div class="profile-direct-contacts">
+                            <a href="mailto:anisha84121@gmail.com" class="profile-chip">
+                                <span>✉️ anisha84121@gmail.com</span>
+                            </a>
+                            <a href="tel:9229947683" class="profile-chip">
+                                <span>📞 +91 9229947683</span>
+                            </a>
+                            <a href="https://wa.me/919229947683" target="_blank" rel="noopener noreferrer" class="profile-chip profile-chip-accent">
+                                <span>💬 Chat on WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="about-card about-story">
+                        <div class="card-icon-wrapper">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+                            </svg>
+                        </div>
+                        <h3>Development Philosophy</h3>
+                        <p>
+                            Great websites aren't just pretty graphics; they are fast, accessible, and intuitive machines built to solve real user problems and accelerate growth.
+                        </p>
+                        <div class="about-highlights">
+                            <div class="highlight-item">
+                                <span class="highlight-check">✓</span>
+                                <span>Human-centered UI/UX design thinking</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-check">✓</span>
+                                <span>Zero-bloat, clean, modular codebases</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-check">✓</span>
+                                <span>Mobile-first & pixel-perfect precision</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-card about-feature">
+                        <div class="card-icon-wrapper">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                            </svg>
+                        </div>
+                        <h3>Modern Technology Stack</h3>
+                        <p>
+                            Leveraging modern frameworks, clean CSS paradigms, and standard web technologies to ensure every project stays ahead of the curve.
+                        </p>
+                        <div class="tech-pills">
+                            <span class="tech-pill">HTML5 & Semantic CSS</span>
+                            <span class="tech-pill">Modern JavaScript ES6+</span>
+                            <span class="tech-pill">Responsive Design</span>
+                            <span class="tech-pill">Performance Tuning</span>
+                            <span class="tech-pill">REST & APIs</span>
+                            <span class="tech-pill">Accessibility (a11y)</span>
+                        </div>
+                    </div>
+
+                    <div class="about-card about-stat-card">
+                        <div class="stat-highlight">
+                            <span class="big-stat">100%</span>
+                            <span class="stat-desc">Commitment to quality code, clean design, and reliable delivery.</span>
+                        </div>
+                        <div class="quote-signature">
+                            <p class="quote-text">"My mission is simple: build digital products that people love to use."</p>
+                            <span class="quote-author">— Anisha Kumari</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES SECTION -->
+        <section id="services" class="section services-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="badge-pill">
+                        <span>What We Offer</span>
+                    </div>
+                    <h2 class="section-title">End-to-End <span class="gradient-text">Digital Services</span></h2>
+                    <p class="section-subtitle">
+                        From initial concept and high-fidelity wireframing to full production deployment, we cover every layer of digital craftsmanship.
+                    </p>
+                </div>
+
+                <div class="services-grid">
+                    <!-- Service 1 -->
+                    <div class="service-card">
+                        <div class="service-icon-box">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="3" y1="9" x2="21" y2="9"></line>
+                                <line x1="9" y1="21" x2="9" y2="9"></line>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">UI & UX Design</h3>
+                        <p class="service-desc">
+                            Intuitive user interfaces, interactive wireframes, and cohesive design systems crafted to maximize user engagement and retention.
+                        </p>
+                        <ul class="service-features">
+                            <li>User Research & Prototyping</li>
+                            <li>Design System Architecture</li>
+                            <li>Interaction & Micro-animations</li>
+                        </ul>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="service-card">
+                        <div class="service-icon-box">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">Web Development</h3>
+                        <p class="service-desc">
+                            Clean, scalable, and modular codebases built with modern web technologies that perform seamlessly across all modern browsers.
+                        </p>
+                        <ul class="service-features">
+                            <li>Modern JavaScript & HTML5/CSS3</li>
+                            <li>API Integrations & Backend Services</li>
+                            <li>Ultra-fast page speed performance</li>
+                        </ul>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="service-card">
+                        <div class="service-icon-box">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                                <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">Responsive Design</h3>
+                        <p class="service-desc">
+                            Fluid, mobile-first layouts that look flawless whether viewed on smartphones, tablets, high-res laptops, or ultra-wide monitors.
+                        </p>
+                        <ul class="service-features">
+                            <li>Adaptive Breakpoint Grids</li>
+                            <li>Touch-friendly interfaces</li>
+                            <li>Cross-browser compatibility</li>
+                        </ul>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="service-card">
+                        <div class="service-icon-box">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 14 14"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">Speed Optimization</h3>
+                        <p class="service-desc">
+                            Fine-tuning Core Web Vitals, asset minification, caching strategies, and lazy loading to achieve sub-second response times.
+                        </p>
+                        <ul class="service-features">
+                            <li>95+ Lighthouse Score tuning</li>
+                            <li>Image compression & modern formats</li>
+                            <li>DOM & CSS refactoring</li>
+                        </ul>
+                    </div>
+
+                    <!-- Service 5 -->
+                    <div class="service-card">
+                        <div class="service-icon-box">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">E-Commerce Solutions</h3>
+                        <p class="service-desc">
+                            High-converting storefronts, streamlined checkout experiences, and payment integrations that drive revenue and boost conversions.
+                        </p>
+                        <ul class="service-features">
+                            <li>Custom Storefront Architecture</li>
+                            <li>Secure Payment Gateway Setup</li>
+                            <li>Inventory & Product Showcases</li>
+                        </ul>
+                    </div>
+
+                    <!-- Service 6 -->
+                    <div class="service-card">
+                        <div class="service-icon-box">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">SEO & Security</h3>
+                        <p class="service-desc">
+                            Built-in search engine optimization, semantic HTML markup, SSL hardening, and security best practices to protect your site.
+                        </p>
+                        <ul class="service-features">
+                            <li>Structured Data & Open Graph tags</li>
+                            <li>XSS & CSRF defense architecture</li>
+                            <li>Fast indexing & crawler readiness</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PORTFOLIO SECTION -->
+        <section id="portfolio" class="section portfolio-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="badge-pill">
+                        <span>Selected Works</span>
+                    </div>
+                    <h2 class="section-title">Projects That Deliver <span class="gradient-text">Measurable Results</span></h2>
+                    <p class="section-subtitle">
+                        Take a look at a curated selection of recent applications and websites we have crafted.
+                    </p>
+                </div>
+
+                <div class="portfolio-grid">
+                    <!-- Project 1 -->
+                    <div class="portfolio-card">
+                        <div class="portfolio-visual project-gradient-1">
+                            <div class="portfolio-mockup">
+                                <div class="mockup-header">
+                                    <div class="mockup-dots"><span class="m-dot"></span><span class="m-dot"></span><span class="m-dot"></span></div>
+                                    <span class="mockup-label">finpulse.io</span>
+                                </div>
+                                <div class="mockup-body">
+                                    <div class="mockup-chart"></div>
+                                    <div class="mockup-stats-row">
+                                        <div class="m-box"></div>
+                                        <div class="m-box"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <div class="portfolio-tags">
+                                <span class="portfolio-tag">FinTech</span>
+                                <span class="portfolio-tag">Web App</span>
+                            </div>
+                            <h3>FinPulse Dashboard</h3>
+                            <p>Real-time analytics portal for modern investment portfolios with interactive charts and automated reporting.</p>
+                            <a href="#contact" class="portfolio-link">
+                                <span>Request Case Study</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                                    <polyline points="7 7 17 7 17 17"></polyline>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="portfolio-card">
+                        <div class="portfolio-visual project-gradient-2">
+                            <div class="portfolio-mockup">
+                                <div class="mockup-header">
+                                    <div class="mockup-dots"><span class="m-dot"></span><span class="m-dot"></span><span class="m-dot"></span></div>
+                                    <span class="mockup-label">aurasphere.co</span>
+                                </div>
+                                <div class="mockup-body">
+                                    <div class="mockup-card-feed">
+                                        <div class="m-feed-item"></div>
+                                        <div class="m-feed-item"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <div class="portfolio-tags">
+                                <span class="portfolio-tag">E-Commerce</span>
+                                <span class="portfolio-tag">Brand Strategy</span>
+                            </div>
+                            <h3>AuraSphere Luxury</h3>
+                            <p>Direct-to-consumer lifestyle commerce platform featuring fluid 3D product previews and instant one-click checkout.</p>
+                            <a href="#contact" class="portfolio-link">
+                                <span>Request Case Study</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                                    <polyline points="7 7 17 7 17 17"></polyline>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="portfolio-card">
+                        <div class="portfolio-visual project-gradient-3">
+                            <div class="portfolio-mockup">
+                                <div class="mockup-header">
+                                    <div class="mockup-dots"><span class="m-dot"></span><span class="m-dot"></span><span class="m-dot"></span></div>
+                                    <span class="mockup-label">hypercloud.dev</span>
+                                </div>
+                                <div class="mockup-body">
+                                    <div class="mockup-terminal">
+                                        <span class="t-line green">$ deploy --prod --region us-east</span>
+                                        <span class="t-line">✔ Built in 2.1s</span>
+                                        <span class="t-line">✔ Deployed to 35 edge nodes</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <div class="portfolio-tags">
+                                <span class="portfolio-tag">Developer Tools</span>
+                                <span class="portfolio-tag">SaaS UI</span>
+                            </div>
+                            <h3>HyperCloud Infrastructure</h3>
+                            <p>Developer-first cloud management platform with instant preview environments, log streams, and edge deployments.</p>
+                            <a href="#contact" class="portfolio-link">
+                                <span>Request Case Study</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                                    <polyline points="7 7 17 7 17 17"></polyline>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS SECTION -->
+        <section id="testimonials" class="section testimonials-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="badge-pill">
+                        <span>Client Praise</span>
+                    </div>
+                    <h2 class="section-title">Endorsed By <span class="gradient-text">Industry Leaders</span></h2>
+                    <p class="section-subtitle">
+                        Here is what our clients have to say about working with our team.
+                    </p>
+                </div>
+
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="rating-stars">★★★★★</div>
+                        <p class="testimonial-quote">
+                            "Nexus completely transformed our web presence. Our conversion rate jumped by 42% in the first month following the redesign."
+                        </p>
+                        <div class="client-info">
+                            <div class="client-avatar avatar-1">SC</div>
+                            <div>
+                                <h4 class="client-name">Sarah Chen</h4>
+                                <span class="client-role">VP Product at Horizon Fintech</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="rating-stars">★★★★★</div>
+                        <p class="testimonial-quote">
+                            "The attention to visual detail, micro-animations, and blistering performance blew away our expectations. True master craftsmen."
+                        </p>
+                        <div class="client-info">
+                            <div class="client-avatar avatar-2">MR</div>
+                            <div>
+                                <h4 class="client-name">Marcus Reynolds</h4>
+                                <span class="client-role">Founder & CEO, Apex Systems</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="rating-stars">★★★★★</div>
+                        <p class="testimonial-quote">
+                            "Working with them was the smoothest engineering partnership we've ever experienced. Communication was prompt, and delivery was spotless."
+                        </p>
+                        <div class="client-info">
+                            <div class="client-avatar avatar-3">EL</div>
+                            <div>
+                                <h4 class="client-name">Elena Laurent</h4>
+                                <span class="client-role">Design Director, Studio Lumos</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="badge-pill">
+                        <span>Get In Touch</span>
+                    </div>
+                    <h2 class="section-title">Ready To Build <span class="gradient-text">Something Extraordinary?</span></h2>
+                    <p class="section-subtitle">
+                        Have an idea or need to modernize your existing web experience? Drop us a line and let's bring it to life.
+                    </p>
+                </div>
+
+                <div class="contact-wrapper">
+                    <!-- Contact Info Cards -->
+                    <div class="contact-info">
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </div>
+                            <div class="info-details">
+                                <span class="info-title">Direct Email</span>
+                                <a href="mailto:anisha84121@gmail.com" class="info-link">anisha84121@gmail.com</a>
+                                <span class="info-note">Response within 24 hours</span>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                            </div>
+                            <div class="info-details">
+                                <span class="info-title">Mobile Number</span>
+                                <a href="tel:9229947683" class="info-link">+91 9229947683</a>
+                                <span class="info-note">Direct call & phone inquiries</span>
+                            </div>
+                        </div>
+
+                        <div class="info-card whatsapp-card">
+                            <div class="info-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                                </svg>
+                            </div>
+                            <div class="info-details">
+                                <span class="info-title">WhatsApp Chat</span>
+                                <a href="https://wa.me/919229947683" target="_blank" rel="noopener noreferrer" class="info-link">Chat on WhatsApp</a>
+                                <span class="info-note">Quick instant message (+91 9229947683)</span>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                            </div>
+                            <div class="info-details">
+                                <span class="info-title">Contact Person & Location</span>
+                                <span class="info-text">Anisha Kumari</span>
+                                <span class="info-note">India • Worldwide Remote & Freelance</span>
+                            </div>
+                        </div>
+
+                        <div class="social-links-box">
+                            <span class="social-label">Follow Our Work:</span>
+                            <div class="social-icons">
+                                <a href="#" class="social-btn" aria-label="GitHub">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                </a>
+                                <a href="#" class="social-btn" aria-label="LinkedIn">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                                </a>
+                                <a href="#" class="social-btn" aria-label="Twitter">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+                                </a>
+                                <a href="#" class="social-btn" aria-label="Dribbble">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M19.13 5.09C15.22 9.14 10 10.44 2.25 10.94"></path><path d="M21.75 12.84c-6.62-1.41-12.14 1-16.38 6.32"></path><path d="M8.56 2.75c4.37 6 6 9.42 8 17.72"></path></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-container">
+                        <form id="contact-form" class="contact-form" novalidate>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="contact-name">Your Name *</label>
+                                    <input type="text" id="contact-name" name="name" placeholder="John Doe" required>
+                                    <span class="field-error" id="name-error"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contact-email">Email Address *</label>
+                                    <input type="email" id="contact-email" name="email" placeholder="john@example.com" required>
+                                    <span class="field-error" id="email-error"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="contact-service">Service Interested In</label>
+                                    <select id="contact-service" name="service">
+                                        <option value="web-development">Web Development</option>
+                                        <option value="ui-ux-design">UI & UX Design</option>
+                                        <option value="responsive-redesign">Responsive Redesign</option>
+                                        <option value="ecommerce">E-Commerce Solution</option>
+                                        <option value="consulting">Full Consultation</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contact-budget">Estimated Budget</label>
+                                    <select id="contact-budget" name="budget">
+                                        <option value="5k-10k">$5k – $10k</option>
+                                        <option value="10k-25k">$10k – $25k</option>
+                                        <option value="25k-50k">$25k – $50k</option>
+                                        <option value="50k+">$50k+</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contact-message">Project Details *</label>
+                                <textarea id="contact-message" name="message" rows="4" placeholder="Tell us about your project, timeline, and goals..." required></textarea>
+                                <span class="field-error" id="message-error"></span>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-submit" id="submit-btn">
+                                <span class="btn-text">Send Message</span>
+                                <svg class="btn-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                </svg>
+                                <span class="spinner" id="form-spinner"></span>
+                            </button>
+
+                            <div class="form-success-alert" id="form-success">
+                                <div class="success-icon">✓</div>
+                                <div>
+                                    <strong>Thank you!</strong> Your message has been sent to Anisha Kumari. I'll get back to you within 24 hours.
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#home" class="logo">
+                        <span class="logo-badge">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                <polyline points="2 17 12 22 22 17"></polyline>
+                                <polyline points="2 12 12 17 22 12"></polyline>
+                            </svg>
+                        </span>
+                        <span class="logo-text">Anisha Kumari<span class="logo-dot">.</span></span>
+                    </a>
+                    <p class="footer-tagline">
+                        Crafting modern digital products, responsive web experiences, and scalable solutions.
+                    </p>
+                    <div style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 10px; display: flex; flex-direction: column; gap: 6px;">
+                        <span>✉️ <a href="mailto:anisha84121@gmail.com" style="color: var(--accent-primary);">anisha84121@gmail.com</a></span>
+                        <span>📞 <a href="tel:9229947683" style="color: var(--accent-primary);">+91 9229947683</a></span>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Our Work</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">UI/UX Design</a></li>
+                        <li><a href="#services">Web Development</a></li>
+                        <li><a href="#services">Mobile Responsive</a></li>
+                        <li><a href="#services">Speed Optimization</a></li>
+                        <li><a href="#services">E-Commerce</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Stay Updated</h4>
+                    <p class="footer-newsletter-text">Subscribe to our newsletter for insights on modern web development and design trends.</p>
+                    <form class="newsletter-form" id="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" aria-label="Subscribe">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Anisha Kumari. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <span class="dot-separator">•</span>
+                    <a href="#">Terms of Service</a>
+                    <span class="dot-separator">•</span>
+                    <a href="#">Security</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Floating Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top" title="Scroll to top">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+        </svg>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
